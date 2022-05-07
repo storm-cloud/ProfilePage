@@ -7,6 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="ProfilePageCSS.css">
+        <script defer src="ProfilePageJS.js"></script>
     </head>
     <body>
         <div class="pagecontainer">
@@ -26,14 +27,12 @@
                         <div class="avatar"><img src="https://i.imgur.com/vrWzgQu.jpeg" alt="" id="myavatar"></div>
                     </div>
                     <div class="profilebody">
-                        <h1>Crowley</h1>
-                        <h3></h3>
+                        <h1 id="yourname">Crowley</h1>
                         <p>Dog | Cute | Is Annoying<br>
-                        <img src="/Users/nicholastilton/Documents/GitHub/ProfilePage/icons/map-marker.png" alt="mapicon" style="size: width:15px;height:15px">
+                        <img src="icons/map-marker.png" alt="mapicon" style="size: width:15px;height:15px">
                         Massachusetts<br>
                         Open to walks in the park</p><br>
-                        <div id="editprofile"><img src="/Users/nicholastilton/Documents/GitHub/ProfilePage/icons/gear.png" alt="gear" style="size: width:15px;height:15px">
-                            edit profile</div>
+                        <div id="editprofile"><button onclick="editName()"><img src="icons/gear.png" alt="gear" id="gear"></button><label for="">Edit Profile</label></div>
                     </div>
                 </div>
 
@@ -52,27 +51,33 @@
             <div class="rightcolumn">
                 <div class="connectionreq">
                     <div class="connectionreqbar">
+                        <p id="reqnum">2</p>
                         <h3>Connection Requests</h3>
                     </div>
                     <div class="connectionreqbody">
-                        <div class="user"><img src="/Users/nicholastilton/Documents/GitHub/ProfilePage/images/todd-s.jpg" alt="Todd" id="savatar">Todd E <div class="buttons">
-                            <img src="/Users/nicholastilton/Documents/GitHub/ProfilePage/icons/accept-circle.png" alt="accept" id="savatar"><img src="/Users/nicholastilton/Documents/GitHub/ProfilePage/icons/close-circle.png" alt="deny" id="savatar"></div>
+                        <div class="user" id="req1"><img src="images/todd-s.jpg" alt="Todd" id="savatar">Todd E 
+                            <div class="buttons">
+                            <img src="icons/accept-circle.png" alt="accept" id="savatar" onclick="addConnection()"><img src="icons/close-circle.png" alt="deny" id="savatar" onclick="remRequest()">
+                            </div>
                         </div>
-                        <div class="user"><img src="/Users/nicholastilton/Documents/GitHub/ProfilePage/images/phil-s.jpg" alt="Phil" id="savatar">Phil K <div class="buttons">
-                            <img src="/Users/nicholastilton/Documents/GitHub/ProfilePage/icons/accept-circle.png" alt="accept" id="savatar"><img src="/Users/nicholastilton/Documents/GitHub/ProfilePage/icons/close-circle.png" alt="deny" id="savatar"></div>
+                        <div class="user" id="req2"><img src="images/phil-s.jpg" alt="Phil" id="savatar">Phil K 
+                            <div class="buttons">
+                            <img src="icons/accept-circle.png" alt="accept" id="savatar" onclick="addConnection2()"><img src="icons/close-circle.png" alt="deny" id="savatar" onclick="remRequest2()">
+                            </div>
                         </div>
                     </div>
                 </div>
     
                 <div class="connectionlst">
                     <div class="connectionlstbar">
+                        <p id="connum">4</p>
                         <h3>Your Connections</h3>
                     </div>
                     <div class="connectionlstbody">
-                        <div class="user"><img src="/Users/nicholastilton/Documents/GitHub/ProfilePage/images/adrien-s.jpg" alt="Adrien D" id="savatar">Adrien D</div>
-                        <div class="user"><img src="/Users/nicholastilton/Documents/GitHub/ProfilePage/images/anne-s.jpg" alt="Anne J" id="savatar">Anne J</div>
-                        <div class="user"><img src="/Users/nicholastilton/Documents/GitHub/ProfilePage/images/alayne-s.jpg" alt="Alayne T" id="savatar">Alayne T</div>
-                        <div class="user"><img src="/Users/nicholastilton/Documents/GitHub/ProfilePage/images/arry-s.jpg" alt="Arry Y" id="savatar">Arry Y</div>
+                        <div class="user"><img src="images/adrien-s.jpg" alt="Adrien D" id="savatar">Adrien D</div>
+                        <div class="user"><img src="images/anne-s.jpg" alt="Anne J" id="savatar">Anne J</div>
+                        <div class="user"><img src="images/alayne-s.jpg" alt="Alayne T" id="savatar">Alayne T</div>
+                        <div class="user"><img src="images/arry-s.jpg" alt="Arry Y" id="savatar">Arry Y</div>
                         <div class="viewmorelink"><a href="null">View More</a></div>
                     </div>
                 </div>
